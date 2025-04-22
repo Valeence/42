@@ -1,0 +1,46 @@
+#ifndef REPLY_HPP
+# define REPLY_HPP
+
+# define ERR_NOSUCHNICK(nick) " " + nick + " :No such nick/channel"
+# define ERR_NOSUCHCHANNEL(channel) " " + channel + " :No such channel"
+# define ERR_NONICKNAMEGIVEN " :No nickname given"
+# define ERR_NOTEXTTOSEND " :No text to send"
+# define ERR_CANNOTSENDTOCHAN(channel) " " + channel + " :Cannot send to channel"
+# define RPL_WHOISUSER(nick, user, host, real) " " + nick + " " + user + " " + host + " * :" + real
+# define RPL_WHOISSERVER(nick) " <nick> <server> :<server info>"
+# define RPL_WHOISOPERATOR(nick) " <nick> :is an IRC operator"
+# define RPL_WHOWASUSER(nick) " <nick> <user> <host> * :<real_name>"
+# define RPL_ENDOFWHO(mask) " " + mask + " :End of /WHO list"
+# define RPL_ENDOFNAMES(channel) " " + channel + " :End of /NAMES list"
+# define RPL_ENDOFBANLIST(channel) " " + channel + " :End of channel ban list"
+# define RPL_CREATIONTIME(channel) " " + channel + "0"
+# define RPL_WHOISIDLE(nick) " <nick> <seconds> :seconds idle"
+# define RPL_ENDOFWHOIS(nick) " " + nick + " :End of /WHOIS list"
+# define RPL_whoIsConnectedS(nick) " <nick> :*( ( '@' / '+' ) <channel> ' ' )"
+# define RPL_WHOISSPECIAL(nick) " <nick> :blah blah blah"
+# define RPL_WHOISSECURE(nick) " <nick> :is using a secure connection"
+# define RPL_WHOISMODES(nick)  "  <nick> :is using modes +ailosw"
+# define RPL_AWAY(nick) " <nick> :<message>"
+# define ERR_NEEDMOREPARAMS(command) " " + command + " :Not enough parameters"
+# define ERR_ALREADYREGISTERED " :You may not reregister"
+# define ERR_CHANOPRIVSNEEDED(channel) " " + channel + " :You're not channel operator"
+# define ERR_USERNOTINCHANNEL(nick, channel) " " + nick + " " + channel + " :They aren't on that channel"
+# define ERR_NOTONCHANNEL(channel) " " + channel + " :You're not on that channel"
+# define RPL_TOPIC(client, channel, topic) " " + client + " " + channel + " :" + topic
+# define RPL_NOTOPIC(client, channel) " " + client + " " + channel + " :No topic is set"
+# define RPL_INVITING(nick, channel) " " + nick + " " + channel 
+# define ERR_USERONCHANNEL(nick, channel) " " + nick + " " + channel + " :is already on channel"
+# define ERR_UMODEUNKNOWNFLAG " :Unknown MODE flag"
+# define ERR_USERSDONTMATCH " :Cant change mode for other users"
+# define ERR_PASSWORDMISMATCH " :Password incorrect"
+# define ERR_INVITEONLYCHAN(channel) " " + channel + " :Cannot join channel (+i)"
+# define ERR_CHANNELISFULL(channel) " " + channel + " :Cannot join channel (+l)"
+# define ERR_BANNEDFROMCHAN(channel) " " + channel + " :Cannot join channel (+b)"
+# define ERR_INVALIDKEY(channel) " " + channel + " :Key is not well-formed"
+# define ERR_BADCHANNELKEY(channel) " " + channel + " :Cannot join channel (+k)"
+# define ERR_UNKNOWNCOMMAND(command) " " + command + " :Unknown command"
+# define ERR_INVALIDMODEPARAM(channel, mode, param, description) " " + channel + " " + mode + " " + param + " :" + description
+# define ERR_ERRONEUSNICKNAME(nick) " " + nick + " :Erroneus nickname"
+# define ERR_NICKNAMEINUSE(nick) " " + nick + " :Nickname is already in use"
+# define ERR_BADCHANMASK(channel) " " + channel + " :Bad Channel Mask"
+#endif

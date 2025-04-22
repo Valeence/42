@@ -1,0 +1,49 @@
+
+services:
+  nginx:
+    build:
+      context: ./requirements/nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    env_file: .env
+    ports:
+      - "443:443"
+    volumes:
+      - /home/vandre/data/wordpress:/var/www/html
+    networks:
+      - inception
+    restart: always
+
+  wordpress:
+    build:
+      context: ./requirements/wordpress
+      dockerfile: Dockerfile
+    container_name: wordpress
+    env_file: .env
+    volumes:
+      - /home/vandre/data/wordpress:/var/www/html 
+    networks:
+      - inception
+    ports:
+      - "9000:9000"
+    depends_on:
+      - mariadb
+    restart: always
+
+  mariadb:
+    build:
+      context: ./requirements/mariadb
+      dockerfile: Dockerfile
+    container_name: mariadb
+    env_file: .env
+    volumes:
+      - /home/vandre/data/mysql:/var/lib/mysql
+    networks:
+      - inception
+    ports:
+      - "3306:3306"
+    restart: always
+
+networks:
+  inception:
+    driver: bridge
