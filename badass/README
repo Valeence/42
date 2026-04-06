@@ -1,0 +1,82 @@
+# BADASS
+
+Le but de ce projet est d’approfondir les connaissances en réseau à travers la simulation d’une infrastructure complète sous GNS3, en utilisant VXLAN et BGP EVPN.
+
+## Description
+
+BADASS (BGP At Doors of Autonomous Systems is Simple) est un projet orienté réseau avancé.
+
+Il consiste à concevoir et configurer plusieurs environnements réseau simulés dans GNS3 à l’aide de conteneurs Docker.
+
+Le projet est divisé en 3 parties :
+
+- `p1` : configuration de l’environnement GNS3 avec Docker
+- `p2` : découverte et mise en place de VXLAN
+- `p3` : découverte de BGP avec EVPN
+
+badass/
+├── p1/
+├── p2/
+└── p3/
+
+Ce projet permet de mieux comprendre :
+
+- GNS3
+- Docker
+- routage réseau
+- VXLAN
+- EVPN
+- MP-BGP
+- overlay / underlay networks
+- virtualisation réseau
+
+## Concepts abordés
+
+### VXLAN
+
+VXLAN (Virtual Extensible LAN) permet d’étendre un réseau Layer 2 au-dessus d’une infrastructure Layer 3.
+
+Il est souvent utilisé dans les architectures modernes de datacenter.
+
+
+### BGP EVPN
+
+Le projet introduit également BGP EVPN, utilisé comme plan de contrôle pour transporter les informations MAC et IP dans l’overlay réseau.
+Cela permet :
+
+- l’apprentissage des adresses MAC
+- la distribution des routes
+- la gestion des VTEP
+- l’interconnexion de segments VXLAN
+
+## Objectif
+
+Le but est de simuler une architecture réseau complète avec :
+
+- plusieurs routeurs
+- plusieurs hôtes
+- un underlay IP
+- un overlay VXLAN
+- distribution des routes via BGP EVPN
+
+## Technologies utilisées
+
+- GNS3
+- Docker
+- FRRouting
+- Linux networking
+- BGP
+- VXLAN
+- EVPN
+- IP routing
+
+## Compétences travaillées
+
+- architecture réseau
+- simulation réseau
+- overlay networking
+- routage avancé
+- BGP EVPN
+- VXLAN
+- troubleshooting réseau
+- infrastructure virtuelle
