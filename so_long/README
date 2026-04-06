@@ -28,7 +28,7 @@ Le jeu repose sur une carte au format `.ber` composée de différents éléments
 - `0` : sol
 - `P` : position du joueur
 - `C` : collectible
-- `E` : sortie :contentReference[oaicite:1]{index=1}
+- `E` : sortie
 
 ## Exemple de carte
 
@@ -57,7 +57,7 @@ ou les flèches du clavier.
 
 Le nombre de mouvements est affiché à chaque déplacement.
 
-Le joueur ne peut pas traverser les murs et doit collecter tous les objets avant d’accéder à la sortie. :contentReference[oaicite:2]{index=2}
+Le joueur ne peut pas traverser les murs et doit collecter tous les objets avant d’accéder à la sortie.
 
 ## Structure du projet
 
