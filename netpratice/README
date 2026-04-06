@@ -1,0 +1,138 @@
+# NetPractice
+
+Le but de ce projet est de découvrir les bases du réseau informatique à travers la configuration de petits réseaux TCP/IP.
+
+## Description
+
+NetPractice est un projet orienté réseau permettant d’apprendre les fondamentaux de la communication entre machines.
+
+Le projet est composé de 10 niveaux, chacun représenté par un fichier JSON de configuration réseau.
+
+L’objectif est de corriger ou compléter la configuration afin que toutes les machines puissent communiquer entre elles.
+
+Ce projet permet de mieux comprendre :
+
+- les adresses IP
+- les masques de sous-réseau
+- le routage
+- les switches
+- les routeurs
+- les réseaux locaux
+- la communication TCP/IP
+
+Les principaux concepts abordés sont :
+
+- IPv4
+- subnet mask
+- network address
+- broadcast address
+- gateway
+- routing
+
+Le projet comporte 10 niveaux :
+
+```bash
+level1.json
+level2.json
+...
+level10.json
+```
+
+## Structure du projet
+
+```bash
+netpractice/
+├── level1.json
+├── level2.json
+├── level3.json
+├── level4.json
+├── level5.json
+├── level6.json
+├── level7.json
+├── level8.json
+├── level9.json
+└── level10.json
+```
+
+## Objectif
+
+Chaque niveau propose une topologie réseau différente.
+
+Le but est de :
+
+- attribuer les bonnes adresses IP
+- choisir le bon masque
+- configurer les routes
+- assurer la connectivité entre les machines
+
+Ce projet constitue une excellente introduction au fonctionnement des réseaux informatiques.
+
+## Adressage IP et plages réseau
+
+Le projet permet d’apprendre le fonctionnement de l’adressage IPv4 et des plages d’adresses disponibles dans un sous-réseau.
+
+Une adresse IP IPv4 est composée de 32 bits, généralement écrite sous la forme :
+
+```bash
+192.168.1.10
+```
+
+Elle est associée à un masque de sous-réseau, par exemple :
+
+```bash
+255.255.255.0
+```
+
+ou en notation CIDR :
+
+```bash
+/24
+```
+
+Le masque permet de séparer :
+
+- la partie réseau
+- la partie hôte
+
+Exemple avec `192.168.1.0/24` :
+
+- adresse réseau : `192.168.1.0`
+- première adresse utilisable : `192.168.1.1`
+- dernière adresse utilisable : `192.168.1.254`
+- adresse de broadcast : `192.168.1.255`
+
+La plage d’adresses utilisables est donc :
+
+```bash
+192.168.1.1 - 192.168.1.254
+```
+
+Le projet aborde aussi différents types de plages réseau comme :
+
+- `/8`
+- `/16`
+- `/24`
+- `/30`
+
+Par exemple, un réseau `/30` offre 4 adresses :
+
+```bash
+10.0.0.0/30
+```
+
+- réseau : `10.0.0.0`
+- hôte 1 : `10.0.0.1`
+- hôte 2 : `10.0.0.2`
+- broadcast : `10.0.0.3`
+
+Ce type de plage est souvent utilisé pour les liaisons point à point entre routeurs.
+
+## Compétences travaillées
+
+- architecture réseau
+- IPv4
+- sous-réseaux
+- routage
+- TCP/IP
+- résolution de problèmes réseau
+- administration système
