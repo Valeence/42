@@ -1,0 +1,61 @@
+# ft_irc
+
+Le but de ce projet est de développer un serveur IRC en C++98 capable de gérer plusieurs connexions simultanées en mode non bloquant.
+
+## Description
+
+ft_irc consiste à recréer le fonctionnement d’un serveur IRC (Internet Relay Chat).
+
+Le serveur permet à plusieurs clients de se connecter, rejoindre des canaux et communiquer en temps réel.
+
+Ce projet permet de mieux comprendre :
+
+- la programmation réseau
+- les sockets TCP/IP
+- la gestion des connexions multiples
+- le polling non bloquant
+- le parsing de commandes
+- la programmation orientée objet en C++
+
+Les principales commandes gérées sont :
+
+- PASS
+- NICK
+- USER
+- JOIN
+- PART
+- PRIVMSG
+- KICK
+- INVITE
+- TOPIC
+- MODE
+
+Le serveur est compatible avec un vrai client IRC comme HexChat ou irssi. :contentReference[oaicite:1]{index=1}
+
+::contentReference[oaicite:2]{index=2}
+
+## Compilation
+
+Compiler le projet avec :
+
+```bash
+make
+```
+
+## Utilisation
+
+```bash
+/connect 127.0.0.1 6667
+```
+
+## Compétences travaillées
+
+- C++98
+- sockets
+- TCP/IP
+- poll
+- programmation réseau
+- parsing
+- POO
+- gestion des clients et canaux
+- communication temps réel
