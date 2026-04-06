@@ -25,11 +25,7 @@ Ce projet permet de mieux comprendre :
 - la gestion des PID
 - le bitwise
 - la synchronisation entre processus
-- la programmation système en C :contentReference[oaicite:1]{index=1}
-
-
-::contentReference[oaicite:2]{index=2}
-
+- la programmation système en C
 
 ## Compilation
 
@@ -54,8 +50,7 @@ Dans un autre terminal, lancer le client :
 
 ./client 12345 "Bonjour"
 
-
-Le message sera reçu puis affiché par le serveur. :contentReference[oaicite:3]{index=3}
+Le message sera reçu puis affiché par le serveur.
 
 ## Compétences travaillées
 
