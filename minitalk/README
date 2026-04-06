@@ -1,0 +1,68 @@
+# minitalk
+
+Le but de ce projet est de développer un programme d’échange de données entre un client et un serveur en utilisant uniquement les signaux UNIX.
+
+## Description
+
+minitalk consiste à créer deux programmes :
+
+- un serveur
+- un client
+
+Le serveur affiche son PID au lancement puis attend la réception d’un message.
+
+Le client envoie une chaîne de caractères au serveur en utilisant uniquement les signaux :
+
+- SIGUSR1
+- SIGUSR2
+
+Chaque caractère est envoyé bit par bit, puis reconstruit côté serveur afin d’afficher le message complet.
+
+Ce projet permet de mieux comprendre :
+
+- les signaux UNIX
+- la communication inter-processus (IPC)
+- la gestion des PID
+- le bitwise
+- la synchronisation entre processus
+- la programmation système en C :contentReference[oaicite:1]{index=1}
+
+
+::contentReference[oaicite:2]{index=2}
+
+
+## Compilation
+
+Compiler le projet avec :
+
+make
+
+Cela génère les exécutables :
+
+server
+client
+
+## Utilisation
+
+Lancer le serveur :
+
+./server
+
+Le serveur affiche son PID.
+
+Dans un autre terminal, lancer le client :
+
+./client 12345 "Bonjour"
+
+
+Le message sera reçu puis affiché par le serveur. :contentReference[oaicite:3]{index=3}
+
+## Compétences travaillées
+
+- langage C
+- signaux UNIX
+- SIGUSR1 / SIGUSR2
+- communication inter-processus
+- bitwise
+- programmation système
+- gestion des processus
