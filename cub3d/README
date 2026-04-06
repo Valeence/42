@@ -1,1 +1,98 @@
+# cub3d
 
+Le but de ce projet est de créer un moteur graphique 3D en C inspiré du jeu Wolfenstein 3D, en utilisant la technique du raycasting avec la bibliothèque MiniLibX.
+
+## Description
+
+cub3d est un projet de rendu graphique qui consiste à afficher une vue 3D à la première personne à partir d’une carte 2D.
+
+Le moteur repose sur la technique du raycasting, qui permet de projeter un environnement 3D à partir d’une grille 2D représentant les murs et les espaces libres.
+
+Ce projet permet de mieux comprendre :
+
+- le raycasting
+- les calculs trigonométriques
+- le rendu graphique en temps réel
+- la gestion des textures
+- les événements clavier et souris
+- la gestion de la fenêtre avec MiniLibX
+- le parsing de fichiers `.cub`
+
+## Fonctionnement
+
+Le programme lit une carte au format `.cub` contenant :
+
+- les textures des murs
+- la couleur du sol
+- la couleur du plafond
+- la disposition de la carte
+- la position initiale du joueur
+
+Exemple :
+
+NO textures/north.xpm
+SO textures/south.xpm
+WE textures/west.xpm
+EA textures/east.xpm
+
+F 220,100,0
+C 225,30,0
+
+111111
+100001
+10N001
+100001
+111111
+
+Chaque colonne de l’écran correspond à un rayon projeté depuis la position du joueur afin de calculer :
+
+- la distance au mur
+- la hauteur à afficher
+- la texture à appliquer
+
+## Contrôles
+
+Les déplacements sont généralement :
+
+- `W` : avancer
+- `S` : reculer
+- `A` : déplacement gauche
+- `D` : déplacement droite
+- `←` / `→` : rotation caméra
+- `ESC` : quitter
+
+Les versions bonus peuvent inclure :
+
+- minimap
+- collisions
+- rotation souris
+- portes
+- sprites
+
+## Structure du projet
+
+cub3d/
+├── include/
+├── maps/
+├── textures/
+├── src/
+└── Makefile
+
+## Utilisation
+
+Lancer le jeu avec une carte :
+
+./cub3d maps/map.cub
+
+## Concepts travaillés
+
+- langage C
+- MiniLibX
+- raycasting
+- trigonométrie
+- rendu temps réel
+- textures
+- parsing
+- logique de jeu
+- optimisation graphique
+- gestion mémoire
