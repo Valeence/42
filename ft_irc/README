@@ -30,20 +30,15 @@ Les principales commandes gérées sont :
 - TOPIC
 - MODE
 
-
 ## Compilation
 
 Compiler le projet avec :
 
-```bash
 make
-```
 
 ## Utilisation
 
-```bash
 /connect 127.0.0.1 6667
-```
 
 ## Compétences travaillées
 
