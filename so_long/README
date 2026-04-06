@@ -1,0 +1,97 @@
+# so_long
+
+Le but de ce projet est de développer un petit jeu 2D en C en utilisant la bibliothèque graphique MiniLibX.
+
+## Description
+
+so_long est un projet orienté développement graphique permettant de créer un jeu 2D basé sur une carte.
+
+Le joueur doit se déplacer sur la carte afin de :
+
+- récupérer tous les collectibles
+- éviter les obstacles
+- atteindre la sortie
+
+Le projet permet de mieux comprendre :
+
+- le rendu graphique avec MiniLibX
+- la gestion des sprites
+- les événements clavier
+- la gestion de fenêtre
+- la logique de jeu
+- la détection de collision
+- le parsing de carte
+
+Le jeu repose sur une carte au format `.ber` composée de différents éléments :
+
+- `1` : mur
+- `0` : sol
+- `P` : position du joueur
+- `C` : collectible
+- `E` : sortie :contentReference[oaicite:1]{index=1}
+
+## Exemple de carte
+
+1111111
+1P0C0E1
+1000001
+1111111
+
+## Fonctionnalités
+
+Le joueur peut se déplacer dans 4 directions :
+
+- haut
+- bas
+- gauche
+- droite
+
+Les déplacements sont généralement gérés avec :
+
+- W
+- A
+- S
+- D
+
+ou les flèches du clavier.
+
+Le nombre de mouvements est affiché à chaque déplacement.
+
+Le joueur ne peut pas traverser les murs et doit collecter tous les objets avant d’accéder à la sortie. :contentReference[oaicite:2]{index=2}
+
+## Structure du projet
+
+so_long/
+├── assets/
+├── maps/
+├── include/
+├── src/
+└── Makefile
+
+## Compilation
+
+Compiler le projet avec :
+
+make
+
+Cela génère l’exécutable :
+
+so_long
+
+## Utilisation
+
+Lancer le jeu avec une carte :
+
+./so_long maps/map.ber
+
+## Concepts travaillés
+
+- langage C
+- MiniLibX
+- rendu 2D
+- sprites
+- événements clavier
+- parsing
+- détection de collision
+- gestion mémoire
+- logique de jeu
