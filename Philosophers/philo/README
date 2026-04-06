@@ -14,7 +14,7 @@ Chaque philosophe effectue les actions suivantes :
 
 Pour manger, un philosophe doit prendre les deux fourchettes placées à sa gauche et à sa droite.
 
-L'objectif principal du projet est d'éviter :
+L’objectif principal du projet est d’éviter :
 
 - les race conditions
 - les deadlocks
@@ -26,43 +26,78 @@ Ce projet permet de mieux comprendre :
 - les mutex
 - la synchronisation des ressources partagées
 - la gestion du temps en millisecondes
-- la concurrence en C
+- la concurrence en C :contentReference[oaicite:1]{index=1}
+
+## Problématique
+
+Le Dining Philosophers Problem est un problème classique en informatique concurrente.
+
+Chaque philosophe a besoin de deux fourchettes pour manger, mais les ressources sont partagées avec les philosophes voisins.
+
+Le défi consiste à garantir que :
+
+- aucun philosophe ne meure de faim
+- aucun blocage global ne se produise
+- plusieurs philosophes puissent manger simultanément lorsque c’est possible :contentReference[oaicite:2]{index=2}
+
+## Structure du projet
+
+D’après ton dépôt :
+
+philo/
+├── Makefile
+├── main.c
+├── philosopher.h
+├── init_philo.c
+├── routine.c
+├── death.c
+├── print.c
+├── check_args.c
+├── utils.c
+└── utils_2.c
+
+:contentReference[oaicite:3]{index=3}
+
+## Compilation
+
+Compiler le projet avec :
+
+make
+
+Cela génère l’exécutable :
+
+philo
 
 ## Utilisation
 
 Lancer le programme avec :
 
-```bash
 ./philo number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
-```
 
 Exemple :
 
-```bash
 ./philo 5 800 200 200
-```
 
 Ou avec nombre de repas minimum :
 
-```bash
 ./philo 5 800 200 200 5
-```
 
 ## Exemple de sortie
 
-```bash
 0 1 is thinking
 1 1 has taken a fork
 2 1 has taken a fork
 3 1 is eating
-```
 
-## Compétences travaillées
+## Concepts travaillés
+
 - langage C
-- pthread
-- mutex
 - multithreading
+- `pthread`
+- mutex
 - synchronisation
 - gestion du temps
-- algorithmique concurrente
-- résolution de deadlock
+- programmation concurrente
+- prévention des deadlocks
+- gestion de la starvation
+Projet réalisé par André Valence dans le cadre du cursus 42.
