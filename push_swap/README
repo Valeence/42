@@ -1,0 +1,116 @@
+# push_swap
+
+Le but de ce projet est de trier une pile d’entiers en utilisant un ensemble limité d’instructions, tout en minimisant le nombre d’opérations.
+
+## Description
+
+push_swap est un projet orienté algorithmique qui consiste à trier des nombres à l’aide de deux piles :
+
+- stack a
+- stack b
+
+Au départ, tous les nombres se trouvent dans `stack a`, et `stack b` est vide.  
+L’objectif n’est pas d’afficher la pile triée, mais de produire la suite d’instructions permettant de la trier. Le projet impose un ensemble restreint d’opérations comme `sa`, `pb`, `ra` ou `rra`, ce qui pousse à concevoir un algorithme efficace plutôt qu’un simple tri classique. :contentReference[oaicite:0]{index=0}
+
+Ce projet permet de mieux comprendre :
+
+- les algorithmes de tri
+- l’optimisation du nombre d’instructions
+- la manipulation de piles
+- la gestion des arguments
+- la validation des entrées
+- la gestion mémoire en C
+
+## Structure du projet
+
+D’après ton dépôt, le projet contient les dossiers `include`, `libft` et `src`, ainsi qu’un `makefile`. :contentReference[oaicite:1]{index=1}
+
+```bash
+push_swap/
+├── include/
+├── libft/
+├── src/
+└── makefile
+```
+
+## Instructions autorisées
+
+Les opérations principales du projet sont :
+
+- `sa` : échange les deux premiers éléments de la stack a
+- `sb` : échange les deux premiers éléments de la stack b
+- `ss` : exécute `sa` et `sb` en même temps
+- `pa` : pousse le premier élément de b vers a
+- `pb` : pousse le premier élément de a vers b
+- `ra` : fait une rotation de a vers le haut
+- `rb` : fait une rotation de b vers le haut
+- `rr` : exécute `ra` et `rb` en même temps
+- `rra` : fait une rotation inverse de a
+- `rrb` : fait une rotation inverse de b
+- `rrr` : exécute `rra` et `rrb` en même temps :contentReference[oaicite:2]{index=2}
+
+## Objectif
+
+Le but du programme est de :
+
+- parser correctement les arguments
+- vérifier les erreurs d’entrée
+- éviter les doublons
+- trier les nombres avec le moins d’instructions possible
+- gérer efficacement les petits et grands jeux de données
+
+Le projet demande aussi de gérer correctement les cas d’erreur, comme les doublons, les valeurs hors plage `int`, ou les arguments invalides. :contentReference[oaicite:3]{index=3}
+
+## Compilation
+
+Compiler le projet avec :
+
+```bash
+make
+```
+
+Cela génère l’exécutable :
+
+```bash
+push_swap
+```
+
+## Utilisation
+
+Exemple d’exécution :
+
+```bash
+./push_swap 2 1 3 6 5 8
+```
+
+Le programme affiche une suite d’instructions, par exemple :
+
+```bash
+sa
+pb
+ra
+pa
+```
+
+## Approche algorithmique
+
+Le projet pousse à utiliser des stratégies différentes selon la taille de l’entrée.
+
+Par exemple :
+
+- un traitement spécifique pour 2 à 5 nombres
+- un algorithme plus général pour les listes plus longues
+- une éventuelle normalisation des valeurs pour simplifier le tri
+
+L’enjeu principal est d’obtenir un tri correct avec le moins de coups possible, ce qui demande un vrai travail d’optimisation. :contentReference[oaicite:4]{index=4}
+
+## Compétences travaillées
+
+- langage C
+- algorithmique
+- structures de données
+- piles
+- parsing
+- optimisation
+- gestion des erreurs
+- gestion mémoire
