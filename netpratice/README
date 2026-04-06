@@ -31,16 +31,13 @@ Les principaux concepts abordés sont :
 
 Le projet comporte 10 niveaux :
 
-```bash
 level1.json
 level2.json
 ...
 level10.json
-```
 
 ## Structure du projet
 
-```bash
 netpractice/
 ├── level1.json
 ├── level2.json
@@ -52,7 +49,6 @@ netpractice/
 ├── level8.json
 ├── level9.json
 └── level10.json
-```
 
 ## Objectif
 
@@ -73,21 +69,15 @@ Le projet permet d’apprendre le fonctionnement de l’adressage IPv4 et des pl
 
 Une adresse IP IPv4 est composée de 32 bits, généralement écrite sous la forme :
 
-```bash
 192.168.1.10
-```
 
 Elle est associée à un masque de sous-réseau, par exemple :
 
-```bash
 255.255.255.0
-```
 
 ou en notation CIDR :
 
-```bash
 /24
-```
 
 Le masque permet de séparer :
 
@@ -103,9 +93,7 @@ Exemple avec `192.168.1.0/24` :
 
 La plage d’adresses utilisables est donc :
 
-```bash
 192.168.1.1 - 192.168.1.254
-```
 
 Le projet aborde aussi différents types de plages réseau comme :
 
@@ -116,9 +104,7 @@ Le projet aborde aussi différents types de plages réseau comme :
 
 Par exemple, un réseau `/30` offre 4 adresses :
 
-```bash
 10.0.0.0/30
-```
 
 - réseau : `10.0.0.0`
 - hôte 1 : `10.0.0.1`
