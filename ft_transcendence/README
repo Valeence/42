@@ -1,0 +1,99 @@
+# ft_transcendence
+
+Le but de ce projet est de développer une application web complète de type full-stack autour du jeu Pong, avec authentification, gestion des utilisateurs et fonctionnalités temps réel.
+
+## Description
+
+ft_transcendence est un projet orienté développement web avancé.
+
+L’objectif est de concevoir une plateforme web permettant aux utilisateurs de :
+
+- créer un compte
+- se connecter
+- jouer à Pong en ligne
+- discuter avec d’autres utilisateurs
+- gérer une liste d’amis
+- consulter l’historique des parties
+- participer à des tournois
+
+Le projet permet de mieux comprendre :
+
+- le développement full-stack
+- les API REST
+- les WebSockets
+- l’authentification sécurisée
+- la gestion de base de données
+- le développement front-end et back-end
+- le temps réel
+
+## Fonctionnalités principales
+
+### Authentification
+
+Le projet inclut un système d’authentification sécurisé avec :
+
+- login / mot de passe
+- sessions
+- 2FA (double authentification)
+- gestion du profil utilisateur
+
+### Jeu Pong
+
+Le cœur du projet repose sur un jeu Pong jouable directement dans le navigateur.
+
+Fonctionnalités possibles :
+
+- solo
+- multijoueur
+- parties en temps réel
+- matchmaking
+- tournois
+
+## Temps réel
+
+Les parties multijoueur et le chat utilisent généralement les WebSockets pour assurer une communication en temps réel entre les utilisateurs.
+
+Cela permet :
+
+- l’échange instantané des mouvements
+- le chat en direct
+- les invitations de parties
+- la mise à jour du score en live
+
+## Architecture
+
+Le projet repose sur une architecture client / serveur.
+
+Exemple de structure :
+
+ft_transcendence/
+├── backend/
+├── frontend/
+├── docker/
+├── database/
+└── Makefile
+
+## Technologies utilisées
+
+Selon l’implémentation du projet :
+
+- TypeScript / JavaScript
+- Node.js
+- framework web
+- WebSockets
+- base de données SQL
+- Docker
+- NGINX
+- API REST
+
+## Concepts travaillés
+
+- développement web full-stack
+- API
+- temps réel
+- authentification
+- sécurité web
+- architecture logicielle
+- Docker
+- base de données
+- communication réseau
