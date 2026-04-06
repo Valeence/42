@@ -1,7 +1,5 @@
 # ft_printf
 
-Projet réalisé dans le cadre du cursus de l'école 42.
-
 Le but de ce projet est de recréer le comportement de la fonction `printf` de la bibliothèque standard en C.
 
 ## Description
@@ -67,7 +65,3 @@ int main(void)
 - gestion mémoire
 - structures de données simples
 - Makefile
-
-## Auteur
-
-Projet réalisé par **André Valence** dans le cadre du cursus 42.
