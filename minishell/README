@@ -37,7 +37,7 @@ Ce projet permet de mieux comprendre :
 - la tokenisation
 - la gestion mémoire
 - les signaux UNIX
-- la programmation système en C :contentReference[oaicite:1]{index=1}
+- la programmation système en C
 
 ## Structure du projet
 
@@ -51,19 +51,16 @@ minishell/
 ├── Makefile
 └── main.c
 
-
 Lancer le shell :
 
 ./minishell
 
 Exemple :
 
-```bash
 minishell$ echo Hello
 Hello
 
 minishell$ ls -la | grep .c
-```
 
 ## Fonctionnalités
 
