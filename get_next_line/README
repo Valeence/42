@@ -20,9 +20,7 @@ char    *get_next_line(int fd);
 
 À chaque appel, la fonction retourne la ligne suivante du fichier, y compris le caractère `\n` lorsqu’il est présent.
 
-Ce projet permet d’apprendre en profondeur le fonctionnement des buffers et de la lecture séquentielle en C. :contentReference[oaicite:1]{index=1}
-
-::contentReference[oaicite:2]{index=2}
+Ce projet permet d’apprendre en profondeur le fonctionnement des buffers et de la lecture séquentielle en C.
 
 ## Utilisation
 
@@ -47,7 +45,7 @@ int main(void)
     close(fd);
 }
 
-Exemple de compilation manuelle : :contentReference[oaicite:3]{index=3}
+Exemple de compilation manuelle:
 
 gcc get_next_line.c get_next_line_utils.c main.c -D BUFFER_SIZE=42
 
@@ -59,4 +57,4 @@ gcc get_next_line.c get_next_line_utils.c main.c -D BUFFER_SIZE=42
 - variables statiques
 - gestion mémoire
 - buffers
-- parsing de texte
+- parsing
