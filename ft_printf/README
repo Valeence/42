@@ -27,27 +27,16 @@ Les conversions gérées sont :
 
 Compiler la librairie avec :
 
-```bash
 make
-```
 
 ## Utilisation
 
-Inclure le header dans votre fichier :
-
-```c
-#include "ft_printf.h"
-```
-
 Compiler avec la librairie :
 
-```bash
 gcc main.c libftprintf.a
-```
 
 Exemple :
 
-```c
 #include "ft_printf.h"
 
 int main(void)
@@ -55,7 +44,6 @@ int main(void)
     ft_printf("Hello %s\n", "42");
     return (0);
 }
-```
 
 ## Compétences travaillées
 
