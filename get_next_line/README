@@ -1,0 +1,62 @@
+# get_next_line
+
+Le but de ce projet est de développer une fonction capable de lire un fichier ou une entrée standard ligne par ligne à partir d’un file descriptor.
+
+## Description
+
+get_next_line consiste à recréer une fonction permettant de retourner une ligne à chaque appel.
+
+Ce projet permet de mieux comprendre :
+
+- la lecture de fichiers avec `read()`
+- la gestion des file descriptors
+- l’utilisation des variables statiques
+- la gestion dynamique de la mémoire
+- la manipulation de chaînes de caractères en C
+
+La fonction principale est :
+
+char    *get_next_line(int fd);
+
+À chaque appel, la fonction retourne la ligne suivante du fichier, y compris le caractère `\n` lorsqu’il est présent.
+
+Ce projet permet d’apprendre en profondeur le fonctionnement des buffers et de la lecture séquentielle en C. :contentReference[oaicite:1]{index=1}
+
+::contentReference[oaicite:2]{index=2}
+
+## Utilisation
+
+Exemple d’utilisation :
+
+#include "get_next_line.h"
+#include <fcntl.h>
+
+int main(void)
+{
+    int     fd;
+    char    *line;
+
+    fd = open("test.txt", O_RDONLY);
+    line = get_next_line(fd);
+    while (line)
+    {
+        printf("%s", line);
+        free(line);
+        line = get_next_line(fd);
+    }
+    close(fd);
+}
+
+Exemple de compilation manuelle : :contentReference[oaicite:3]{index=3}
+
+gcc get_next_line.c get_next_line_utils.c main.c -D BUFFER_SIZE=42
+
+## Compétences travaillées
+
+- langage C
+- file descriptors
+- read
+- variables statiques
+- gestion mémoire
+- buffers
+- parsing de texte
