@@ -61,14 +61,6 @@ Les déplacements sont généralement :
 - `←` / `→` : rotation caméra
 - `ESC` : quitter
 
-Les versions bonus peuvent inclure :
-
-- minimap
-- collisions
-- rotation souris
-- portes
-- sprites
-
 ## Structure du projet
 
 cub3d/
