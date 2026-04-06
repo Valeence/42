@@ -1,0 +1,89 @@
+# minishell
+
+Le but de ce projet est de recréer un shell Unix minimal inspiré de Bash, afin de mieux comprendre le fonctionnement des processus, des pipes et des file descriptors.
+
+## Description
+
+minishell consiste à développer un interpréteur de commandes capable d’exécuter des commandes système et des builtins.
+
+Le shell prend en charge :
+
+- l’exécution de commandes depuis le PATH
+- les chemins absolus et relatifs
+- les pipes `|`
+- les redirections `<`, `>`, `>>`, `<<`
+- les variables d’environnement `$VAR`
+- le code retour `$?`
+- la gestion des signaux
+- l’historique des commandes
+
+Les builtins implémentés sont :
+
+- echo
+- cd
+- pwd
+- export
+- unset
+- env
+- exit
+
+Ce projet permet de mieux comprendre :
+
+- les processus avec `fork()`
+- l’exécution avec `execve()`
+- les pipes
+- les file descriptors
+- le parsing de commandes
+- la tokenisation
+- la gestion mémoire
+- les signaux UNIX
+- la programmation système en C :contentReference[oaicite:1]{index=1}
+
+## Structure du projet
+
+minishell/
+├── Builtins/
+├── Exe/
+├── Include/
+├── Parsing/
+├── Tokenisation/
+├── doc/
+├── Makefile
+└── main.c
+
+
+Lancer le shell :
+
+./minishell
+
+Exemple :
+
+```bash
+minishell$ echo Hello
+Hello
+
+minishell$ ls -la | grep .c
+```
+
+## Fonctionnalités
+
+- exécution de commandes système
+- gestion des builtins
+- pipes
+- redirections
+- here-doc
+- variables d’environnement
+- historique avec readline
+- gestion de Ctrl+C, Ctrl+D et Ctrl+\
+
+## Compétences travaillées
+
+- langage C
+- programmation système
+- fork / execve
+- pipes
+- parsing
+- file descriptors
+- signaux UNIX
+- gestion mémoire
+- architecture logicielle
