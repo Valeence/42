@@ -1,0 +1,68 @@
+# Philosophers
+
+Le but de ce projet est de résoudre le célèbre problème du Dining Philosophers, afin d'apprendre les bases du multithreading, de la synchronisation et de la gestion des mutex en langage C.
+
+## Description
+
+Le programme simule plusieurs philosophes assis autour d'une table.
+
+Chaque philosophe effectue les actions suivantes :
+
+- manger
+- dormir
+- réfléchir
+
+Pour manger, un philosophe doit prendre les deux fourchettes placées à sa gauche et à sa droite.
+
+L'objectif principal du projet est d'éviter :
+
+- les race conditions
+- les deadlocks
+- la starvation
+
+Ce projet permet de mieux comprendre :
+
+- les threads avec `pthread`
+- les mutex
+- la synchronisation des ressources partagées
+- la gestion du temps en millisecondes
+- la concurrence en C
+
+## Utilisation
+
+Lancer le programme avec :
+
+```bash
+./philo number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
+```
+
+Exemple :
+
+```bash
+./philo 5 800 200 200
+```
+
+Ou avec nombre de repas minimum :
+
+```bash
+./philo 5 800 200 200 5
+```
+
+## Exemple de sortie
+
+```bash
+0 1 is thinking
+1 1 has taken a fork
+2 1 has taken a fork
+3 1 is eating
+```
+
+## Compétences travaillées
+- langage C
+- pthread
+- mutex
+- multithreading
+- synchronisation
+- gestion du temps
+- algorithmique concurrente
+- résolution de deadlock
