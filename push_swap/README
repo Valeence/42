@@ -10,7 +10,7 @@ push_swap est un projet orienté algorithmique qui consiste à trier des nombres
 - stack b
 
 Au départ, tous les nombres se trouvent dans `stack a`, et `stack b` est vide.  
-L’objectif n’est pas d’afficher la pile triée, mais de produire la suite d’instructions permettant de la trier. Le projet impose un ensemble restreint d’opérations comme `sa`, `pb`, `ra` ou `rra`, ce qui pousse à concevoir un algorithme efficace plutôt qu’un simple tri classique. :contentReference[oaicite:0]{index=0}
+L’objectif n’est pas d’afficher la pile triée, mais de produire la suite d’instructions permettant de la trier. Le projet impose un ensemble restreint d’opérations comme `sa`, `pb`, `ra` ou `rra`, ce qui pousse à concevoir un algorithme efficace plutôt qu’un simple tri classique.
 
 Ce projet permet de mieux comprendre :
 
@@ -23,7 +23,7 @@ Ce projet permet de mieux comprendre :
 
 ## Structure du projet
 
-D’après ton dépôt, le projet contient les dossiers `include`, `libft` et `src`, ainsi qu’un `makefile`. :contentReference[oaicite:1]{index=1}
+D’après ton dépôt, le projet contient les dossiers `include`, `libft` et `src`, ainsi qu’un `makefile`.
 
 push_swap/
 ├── include/
@@ -45,7 +45,7 @@ Les opérations principales du projet sont :
 - `rr` : exécute `ra` et `rb` en même temps
 - `rra` : fait une rotation inverse de a
 - `rrb` : fait une rotation inverse de b
-- `rrr` : exécute `rra` et `rrb` en même temps :contentReference[oaicite:2]{index=2}
+- `rrr` : exécute `rra` et `rrb` en même temps
 
 ## Objectif
 
@@ -57,7 +57,7 @@ Le but du programme est de :
 - trier les nombres avec le moins d’instructions possible
 - gérer efficacement les petits et grands jeux de données
 
-Le projet demande aussi de gérer correctement les cas d’erreur, comme les doublons, les valeurs hors plage `int`, ou les arguments invalides. :contentReference[oaicite:3]{index=3}
+Le projet demande aussi de gérer correctement les cas d’erreur, comme les doublons, les valeurs hors plage `int`, ou les arguments invalides.
 
 ## Compilation
 
@@ -92,7 +92,7 @@ Par exemple :
 - un algorithme plus général pour les listes plus longues
 - une éventuelle normalisation des valeurs pour simplifier le tri
 
-L’enjeu principal est d’obtenir un tri correct avec le moins de coups possible, ce qui demande un vrai travail d’optimisation. :contentReference[oaicite:4]{index=4}
+L’enjeu principal est d’obtenir un tri correct avec le moins de coups possible, ce qui demande un vrai travail d’optimisation.
 
 ## Compétences travaillées
 
