@@ -1,0 +1,56 @@
+# inception
+
+Le but de ce projet est de mettre en place une petite infrastructure système en utilisant Docker et Docker Compose.
+
+## Description
+
+Inception consiste à créer une architecture composée de plusieurs conteneurs Docker communiquant entre eux.
+
+Le projet inclut généralement les services suivants :
+
+- NGINX
+- WordPress
+- MariaDB
+
+Chaque service fonctionne dans son propre conteneur afin de garantir l’isolation et la modularité de l’infrastructure.
+
+Ce projet permet de mieux comprendre :
+
+- Docker
+- Docker Compose
+- les conteneurs
+- les volumes
+- les réseaux Docker
+- l’administration système
+- le déploiement de services web
+
+L’infrastructure repose sur une architecture de type LEMP :
+
+- Linux
+- NGINX
+- MariaDB
+- PHP / WordPress
+
+
+### NGINX
+
+Serveur web configuré avec SSL / TLS pour sécuriser les connexions HTTPS.
+
+### WordPress
+
+Application web hébergée dans un conteneur dédié.
+
+### MariaDB
+
+Base de données utilisée par WordPress.
+
+## Compétences travaillées
+
+- Docker
+- Docker Compose
+- administration système
+- virtualisation légère
+- réseau
+- volumes persistants
+- sécurité HTTPS
+- architecture de services
