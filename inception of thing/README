@@ -1,0 +1,107 @@
+# inception of things
+
+Le but de ce projet est de découvrir les bases de Kubernetes à travers la mise en place d’une infrastructure utilisant Vagrant, K3s, K3d et Argo CD.
+
+## Description
+
+Inception of Things est un projet orienté administration système et orchestration.
+
+Le projet est divisé en 3 parties :
+
+- `p1` : mise en place de deux machines virtuelles avec Vagrant et K3s
+- `p2` : déploiement de plusieurs applications sur le cluster
+- `p3` : mise en place d’un environnement GitOps avec K3d et Argo CD
+
+inception of thing/
+├── p1/
+├── p2/
+└── p3/
+
+L’objectif est de découvrir les bases de Kubernetes et de comprendre le fonctionnement d’un cluster léger avec K3s.
+
+## Partie 1 - K3s et Vagrant
+
+Cette première partie consiste à déployer deux machines virtuelles avec Vagrant :
+
+- un serveur
+- un worker
+
+Exemple classique :
+
+- `192.168.56.110` : node serveur
+- `192.168.56.111` : node worker
+
+Le serveur exécute le control plane K3s, tandis que le worker rejoint le cluster en mode agent.
+
+Cette partie permet de mieux comprendre :
+
+- Vagrant
+- virtualisation
+- K3s
+- cluster Kubernetes
+- control plane / worker nodes :contentReference[oaicite:3]{index=3}
+
+## Partie 2 - Déploiement d’applications
+
+Cette partie consiste à déployer plusieurs applications web sur le cluster K3s.
+
+Le routage est généralement effectué via l’Ingress Controller intégré à K3s.
+
+Exemple :
+
+- `app1.com`
+- `app2.com`
+- application par défaut
+
+Cette étape permet d’apprendre :
+
+- pods
+- deployments
+- services
+- ingress
+- namespaces
+
+## Partie 3 - K3d et Argo CD
+
+La dernière partie introduit une logique GitOps.
+
+Le cluster est créé avec K3d, puis Argo CD surveille automatiquement un dépôt GitHub afin de déployer les changements sur le cluster.
+
+Cela permet de découvrir :
+
+- K3d
+- Argo CD
+- GitOps
+- déploiement continu
+- synchronisation automatique avec GitHub
+
+## Architecture
+
+Le projet repose sur :
+
+- VMs créées avec Vagrant
+- cluster K3s / K3d
+- applications déployées dans des namespaces
+- pipeline GitOps avec Argo CD
+
+## Technologies utilisées
+
+- Vagrant
+- VirtualBox / libvirt
+- K3s
+- K3d
+- Kubernetes
+- Argo CD
+- YAML
+- Linux
+
+## Compétences travaillées
+
+- orchestration
+- administration système
+- Kubernetes
+- GitOps
+- infrastructure as code
+- virtualisation
+- CI/CD
+- troubleshooting cluster
