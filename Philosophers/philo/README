@@ -26,7 +26,7 @@ Ce projet permet de mieux comprendre :
 - les mutex
 - la synchronisation des ressources partagées
 - la gestion du temps en millisecondes
-- la concurrence en C :contentReference[oaicite:1]{index=1}
+- la concurrence en C
 
 ## Problématique
 
@@ -38,7 +38,7 @@ Le défi consiste à garantir que :
 
 - aucun philosophe ne meure de faim
 - aucun blocage global ne se produise
-- plusieurs philosophes puissent manger simultanément lorsque c’est possible :contentReference[oaicite:2]{index=2}
+- plusieurs philosophes puissent manger simultanément lorsque c’est possible
 
 ## Structure du projet
 
@@ -100,4 +100,3 @@ Ou avec nombre de repas minimum :
 - programmation concurrente
 - prévention des deadlocks
 - gestion de la starvation
-Projet réalisé par André Valence dans le cadre du cursus 42.
