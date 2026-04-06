@@ -30,9 +30,6 @@ Les principales commandes gérées sont :
 - TOPIC
 - MODE
 
-Le serveur est compatible avec un vrai client IRC comme HexChat ou irssi. :contentReference[oaicite:1]{index=1}
-
-::contentReference[oaicite:2]{index=2}
 
 ## Compilation
 
