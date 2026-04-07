@@ -1,99 +1,142 @@
 # ft_transcendence
 
-Le but de ce projet est de développer une application web complète de type full-stack autour du jeu Pong, avec authentification, gestion des utilisateurs et fonctionnalités temps réel.
+Le but de ce projet est de développer une application web full-stack autour du jeu Pong, en utilisant une architecture moderne client / serveur.
 
 ## Description
 
-ft_transcendence est un projet orienté développement web avancé.
+ft_transcendence est le projet final du cursus 42.
 
 L’objectif est de concevoir une plateforme web permettant aux utilisateurs de :
 
 - créer un compte
-- se connecter
-- jouer à Pong en ligne
-- discuter avec d’autres utilisateurs
-- gérer une liste d’amis
-- consulter l’historique des parties
+- se connecter de manière sécurisée
+- jouer à Pong dans le navigateur
+- jouer en multijoueur en temps réel
+- consulter les scores
+- accéder à l’historique des parties
 - participer à des tournois
 
-Le projet permet de mieux comprendre :
+Ce projet permet de mieux comprendre :
 
 - le développement full-stack
 - les API REST
-- les WebSockets
-- l’authentification sécurisée
-- la gestion de base de données
-- le développement front-end et back-end
 - le temps réel
+- l’architecture client / serveur
+- le reverse proxy
+- la conteneurisation avec Docker
 
-## Fonctionnalités principales
+## Structure du projet
 
-### Authentification
+Le projet repose sur une architecture séparée entre frontend et backend.
 
-Le projet inclut un système d’authentification sécurisé avec :
+ft_transcendence/
+├── backend
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── src
+│   └── tsconfig.json
+├── docker-compose.yml
+├── frontend
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── nginx.conf
+│   ├── package.json
+│   ├── public
+│   ├── src
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.js
+├── Makefile
+└── package-lock.json
 
-- login / mot de passe
-- sessions
-- 2FA (double authentification)
-- gestion du profil utilisateur
+## Backend
 
-### Jeu Pong
+Le dossier `backend` contient la logique serveur.
 
-Le cœur du projet repose sur un jeu Pong jouable directement dans le navigateur.
+Il gère notamment :
 
-Fonctionnalités possibles :
+- l’authentification
+- les routes API
+- la logique du jeu
+- la gestion des utilisateurs
+- les scores
+- l’historique des parties
 
-- solo
-- multijoueur
-- parties en temps réel
-- matchmaking
-- tournois
+Le projet utilise TypeScript côté backend.
 
-## Temps réel
+## Frontend
 
-Les parties multijoueur et le chat utilisent généralement les WebSockets pour assurer une communication en temps réel entre les utilisateurs.
+Le dossier `frontend` contient l’interface utilisateur.
+
+Le frontend repose sur :
+
+- `index.html`
+- `src/`
+- `public/`
+- `vite.config.js`
+
+L’application est servie avec **Vite**, ce qui permet un développement rapide et une bonne gestion du bundling.
+
+Le frontend gère :
+
+- l’interface utilisateur
+- les pages de connexion
+- le jeu Pong
+- les profils
+- les scores
+- les interactions utilisateur
+
+## NGINX
+
+Le fichier :
+
+frontend/nginx.conf
+
+montre que NGINX est utilisé pour servir le frontend et gérer le proxy des requêtes.
+
+Il permet généralement :
+
+- de servir l’application web
+- de rediriger les requêtes API
+- de gérer les WebSockets
+- d’optimiser le trafic HTTP
+
+## Docker
+
+Le projet est entièrement conteneurisé.
+
+Chaque partie possède son propre Dockerfile :
+
+backend/Dockerfile
+frontend/Dockerfile
+
+L’orchestration des services est gérée avec :
+
+docker-compose.yml
 
 Cela permet :
 
-- l’échange instantané des mouvements
-- le chat en direct
-- les invitations de parties
-- la mise à jour du score en live
-
-## Architecture
-
-Le projet repose sur une architecture client / serveur.
-
-Exemple de structure :
-
-ft_transcendence/
-├── backend/
-├── frontend/
-├── docker/
-├── database/
-└── Makefile
+- l’isolation frontend / backend
+- un environnement reproductible
+- un déploiement simplifié
 
 ## Technologies utilisées
 
-Selon l’implémentation du projet :
-
-- TypeScript / JavaScript
-- Node.js
-- framework web
-- WebSockets
-- base de données SQL
-- Docker
+- TypeScript
+- JavaScript
+- Vite
 - NGINX
-- API REST
-
-## Concepts travaillés
-
-- développement web full-stack
-- API
-- temps réel
-- authentification
-- sécurité web
-- architecture logicielle
 - Docker
-- base de données
-- communication réseau
+- Docker Compose
+- HTML / CSS
+
+## Compétences travaillées
+
+- développement full-stack
+- architecture web
+- reverse proxy
+- Docker
+- TypeScript
+- front-end / back-end
+- temps réel
+- réseau
